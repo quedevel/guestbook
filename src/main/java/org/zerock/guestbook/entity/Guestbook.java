@@ -5,11 +5,11 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Data
 public class Guestbook extends BaseEntity{
 
     @Id
