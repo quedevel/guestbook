@@ -26,7 +26,7 @@ public class GuestbookServiceTests {
 
     @Test
     public void testList(){
-        PageRequestDTO pageRequestDTO = PageRequestDTO.builder().page(11).size(10).build();
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder().page(1).size(10).build();
 
         PageResultDTO<GuestbookDTO, Guestbook> resultDTO = guestbookService.getList(pageRequestDTO);
 
