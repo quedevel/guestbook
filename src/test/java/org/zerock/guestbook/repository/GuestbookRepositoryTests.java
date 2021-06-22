@@ -2,6 +2,7 @@ package org.zerock.guestbook.repository;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.dsl.BooleanExpression;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +20,11 @@ public class GuestbookRepositoryTests {
 
     @Autowired
     private GuestbookRepository guestbookRepository;
+
+    @BeforeAll
+    public void deleteDummies(){
+        guestbookRepository.deleteAll();
+    }
 
     @Test
     public void insertDummies(){
